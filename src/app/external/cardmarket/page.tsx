@@ -2,6 +2,16 @@
 import { Suspense } from 'react'
 import { redirect, useSearchParams } from 'next/navigation'
 
+const FallbackComp = () => {
+    return (
+      <section id="loading" className="relative z-10 py-16 md:py-20 lg:py-28">
+        <div className="container">
+          Redireccionando...
+        </div>
+      </section>
+    )
+} 
+
 const RedirectComp = () => {
   const searchParams = useSearchParams()
   const game = searchParams.get('game');
@@ -10,7 +20,7 @@ const RedirectComp = () => {
 
 const ExternalPage = () => {
   return (
-    <Suspense>
+    <Suspense fallback={<FallbackComp/>}>
       <RedirectComp/>
     </Suspense>
   )
