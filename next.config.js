@@ -18,8 +18,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/external/cardmarket',
-        destination: 'https://www.cardmarket.com/es/Lorcana/Users/SimonVtcg',
+        source: '/external/cardmarket/:game',
+        destination: 'https://www.cardmarket.com/es/:game/Users/SimonVtcg',
         permanent: true,
       },
       {
