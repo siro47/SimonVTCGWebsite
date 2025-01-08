@@ -17,8 +17,11 @@ const AboutPage = () => {
         pageName="Eventos"
         description="Encuentra aquí los próximos eventos organizados por SimonV y apúntate"
       />
-      <EventsSectionOne />
-      <EventsSectionTwo />
+
+      <div className="container grid grid-cols-1 md:grid-cols-2">
+        <EventsSectionTwo/>
+        <EventsSectionOne />
+      </div>
     </>
   );
 };

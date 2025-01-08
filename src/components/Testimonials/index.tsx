@@ -9,7 +9,7 @@ const testimonialData: Testimonial[] = [
     designation: "Valoración en cardmarket",
     content:
       "Perfect Seller. Shipped 2 hours after the order. 5/5 Feedback",
-    image: "/images/testimonials/auth-00.png",
+    image: "/images/testimonials/auth-00.jpg",
     star: 5,
   },
   {
@@ -18,7 +18,7 @@ const testimonialData: Testimonial[] = [
     designation: "Valoración en cardmarket",
     content:
       "Envío rápido y muy recomendable",
-    image: "/images/testimonials/auth-00.png",
+    image: "/images/testimonials/auth-00.jpg",
     star: 5,
   },
   {
@@ -27,7 +27,7 @@ const testimonialData: Testimonial[] = [
     designation: "Valoración en cardmarket",
     content:
       "Excellent seller, always helpful. We had a problem with shipping, but it was resolved.",
-    image: "/images/testimonials/auth-00.png",
+    image: "/images/testimonials/auth-00.jpg",
     star: 5,
   },
 ];

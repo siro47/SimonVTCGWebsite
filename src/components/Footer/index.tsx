@@ -27,7 +27,7 @@ const Footer = () => {
                   </p>
                 </div>
                 <div className="flex items-center justify-around">
-                  <a href="" target="_blank">
+                  <a href="https://chat.whatsapp.com/JWrJAkUXPNi11hsGbgNFx0" target="_blank">
                   <FontAwesomeIcon icon={faWhatsapp} className="fas fa-instagram fa-2xl hover:text-secondary">
                   </FontAwesomeIcon>
                   </a>

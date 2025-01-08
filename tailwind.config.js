@@ -76,6 +76,32 @@ module.exports = {
       dropShadow: {
         three: "0px 5px 15px rgba(6, 8, 15, 0.05)",
       },
+      keyframes: {
+        "fade-in-left": {
+          "0%": {
+            opacity: 0,
+            transform: "translate3d(-100%, 0, 0)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translate3d(0, 0, 0)",
+          },
+        },
+        "fade-in-right": {
+          "0%": {
+            opacity: 0,
+            transform: "translate3d(100%, 0, 0)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translate3d(0, 0, 0)",
+          },
+        }
+      },
+      animation: {
+        'fadeInLeft': 'fade-in-left 1s ease-in-out 0.25s 1',
+        'fadeInRight': 'fade-in-right 1s ease-in-out 0.25s 1',
+      },
     },
   },
   plugins: [],
