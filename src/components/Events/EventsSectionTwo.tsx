@@ -5,7 +5,7 @@ const EventsSectionTwo = () => {
     <section id="swu-event" className="md:pt-4 lg:pt-10">
         <h1 className="mb-8 text-3xl"> Star Wars Unlimited - Twin Suns Tournament </h1>
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
-          <div className="-mx-4 flex flex-wrap items-center">
+          <div className="-mx-4 -mb-4 flex flex-wrap items-center">
 
             <div className="lg:w-3/12"></div>
 
@@ -19,6 +19,9 @@ const EventsSectionTwo = () => {
                 />
               </div>
              </div>
+          </div>
+          <div className="text-end md:pr-10">
+            <a href="/events/StarWarsUnlimited-TwinSuns" className="text-primary italic"> Más información > </a>
           </div>
           <div className="w-fit mx-auto mt-10">
             <a href="https://wargenwargames.com/es/altered/7463-sw-unlimited-simonv-twin-suns-tournament.html" target="_blank">
