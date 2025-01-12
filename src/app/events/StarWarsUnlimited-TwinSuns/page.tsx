@@ -16,7 +16,7 @@ const SWUPage = () => {
         pageName="Eventos"
         pageLink="events"
         subPageName="StarWarsUnlimited - TwinSuns"
-        description="Torneo SWU"
+        description="Torneo StarWarsUnlimited - TwinSuns"
       />
 
       <div className="container grid grid-cols-1 md:grid-cols-2">
