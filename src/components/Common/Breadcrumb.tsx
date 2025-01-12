@@ -7,8 +7,8 @@ const Breadcrumb = ({
   description,
 }: {
   pageName: string;
-  pageLink: string;
-  subPageName: string;
+  pageLink?: string;
+  subPageName?: string;
   description: string;
 }) => {
   return (

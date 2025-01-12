@@ -21,7 +21,7 @@ const EventsSectionTwo = () => {
              </div>
           </div>
           <div className="text-end md:pr-10">
-            <a href="/events/StarWarsUnlimited-TwinSuns" className="text-primary italic"> Más información > </a>
+            <a href="/events/StarWarsUnlimited-TwinSuns" className="text-primary italic"> Más información {'>'} </a>
           </div>
           <div className="w-fit mx-auto mt-10">
             <a href="https://wargenwargames.com/es/altered/7463-sw-unlimited-simonv-twin-suns-tournament.html" target="_blank">
