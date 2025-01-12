@@ -4,8 +4,8 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Event Page | SimonV TCG",
-  description: "This is Event Page for SimonV TCG Webpage",
+  title: "Star Wars Unlimited - Twin Suns | SimonV TCG",
+  description: "Main page of Star Wars Unlimited - Twin Suns Tournament organised by SimonV TCG",
   // other metadata
 };
 
