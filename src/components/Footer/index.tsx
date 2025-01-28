@@ -34,7 +34,7 @@ const Footer = () => {
                   <a href="https://www.instagram.com/simonvtcg/profilecard/" target="_blank">
                   <FontAwesomeIcon icon={faInstagram} className="fas fa-instagram fa-2xl hover:text-secondary"></FontAwesomeIcon>
                   </a>
-                  <a href="" target="_blank">
+                  <a href="https://discord.gg/GaKCZpCZ" target="_blank">
                   <FontAwesomeIcon icon={faDiscord} className="fas fa-instagram fa-2xl hover:text-secondary"></FontAwesomeIcon>
                   </a>
                   {/* <a
