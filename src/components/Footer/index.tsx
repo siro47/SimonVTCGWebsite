@@ -123,26 +123,18 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link
-                      href="/blog"
+                      href="/privacy"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Blog
+                      Política de privacidad
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/"
+                      href="/cookies"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Pricing
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/about"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      About
+                      Política de cookies
                     </Link>
                   </li>
                 </ul>
@@ -238,18 +230,7 @@ const Footer = () => {
 
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-8 flex">
-            <div className="sm:w-1/2 text-center text-base text-body-color dark:text-white">
-              Política de privacidad
-            </div>
-            <div className="sm:w-1/2 text-center text-base text-body-color dark:text-white">
-              Aviso legal
-            </div>
-            <div className="sm:w-1/2 text-center text-base text-body-color dark:text-white">
-              Política de cookies
-            </div>
-            <div className="sm:w-1/2 text-center text-base text-body-color dark:text-white">
-              Política de devolución
-            </div>
+            <p className='text-xs text-body-color-dark'> @ Copyright 2025 SimonV TCG, All Rights Reserved</p>
           </div>
         </div>
         <div className="absolute right-0 top-14 z-[-1]">
