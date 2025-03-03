@@ -1,29 +1,63 @@
+import useStore from "@/lib/zustand";
+import { useEffect, useState } from "react";
+
 const PricingBox = (props: {
     title: string;
+    priceId: string;
+    price?: string;
     desc: string;
     image: string;
     text: string;
-    link: string;
+    stock: number;
+    link?: string;
     children: React.ReactNode;
   }) => {
-    const { title, desc, text, image, link} = props;
-  
+    const { title, price, priceId, stock, desc, text, image, link } = props;
+    const { items, increase, clearPersistedState } = useStore();
+    // clearPersistedState();
+    console.log(priceId)
+    const [available, setAvailable] = useState(true);
+
+    const formattedPrice = (price) => new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "EUR",
+    }).format(price / 100);
+
+    useEffect(() => {
+      const itemsInCart = items.find(i => i.key === priceId)?.count ?? 0;
+      setAvailable(itemsInCart < stock)
+    }, [items])
+    
     return (
-      <div className="w-full h-full">
+      <div className="w-full h-full opacity-0 animate-fadeInDown">
         <div className="relative h-full z-10 rounded-sm bg-white px-8 py-10 shadow-three hover:shadow-one dark:bg-gray-dark dark:shadow-two dark:hover:shadow-gray-dark">
           <h3 className="price mb-2 text-[32px] font-bold text-black dark:text-white">
             {title}
           </h3>
           <p className="text-base text-body-color">{desc}</p>
-          <div className="p-10 flex justify-center">
-              <img src={image} className="object-contain h-[300px]"></img>
-            </div>
+          <div className="flex justify-center">
+            <img src={image} className={`object-contain h-[300px] pt-10 hover:scale-125`}></img>
+          </div>
+          <div className="text-end p-4">
+            <span className="text-[32px] font-black shadow-lg [text-shadow:_4px_4px_rgb(0_84_143)]">{formattedPrice(price)}</span>
+          </div>
           <div className="self-end border-t border-body-color border-opacity-10 pt-8 dark:border-white dark:border-opacity-10">
-            <a href={link} target="_blank">
-              <button className="flex w-full items-center justify-center rounded-sm bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
-                {text}
-              </button>
-            </a>
+            {
+              !link && 
+              <a target="_blank">
+                <button onClick={() => increase(priceId)} disabled={!available} className="flex w-full items-center justify-center rounded-sm bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp disabled:bg-gray-400">
+                  {available ? text: 'No puedes añadir más'}
+                </button>
+              </a>
+            }
+            {
+              link &&
+              <a target="_blank" href={link}>
+                <button className="flex w-full items-center justify-center rounded-sm bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
+                  {text}
+                </button>
+              </a>
+            }
           </div>
           <div className="absolute bottom-0 right-0 z-[-1]">
             <svg

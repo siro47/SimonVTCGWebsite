@@ -1,56 +1,59 @@
 "use client";
-import { useState } from "react";
-import SectionTitle from "../Common/SectionTitle";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+
+import Brands from "@/components/Brands";
+
 import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
+import brandsData from "../Brands/brandsData";
 
-const Products = () => {
+const Products = ({params}) => {
+  const [products, setProducts] = useState([]);
+
+  const { id } = params ?? {};
+  const router = useRouter();
+
+  useEffect(() => {
+    // React advises to declare the async function directly inside useEffect
+    async function getProducts() {
+      if (!id) return;
+      const brand = brandsData.find(b => b.name === id)
+      if (!brand) return;
+      const url = `/api/products?section=${brand.key}`;
+      const headers = {'Content-Type': 'application/json'};
+      const res = await fetch(url, {headers});
+      const jsonRes = await res.json()
+
+      setProducts(jsonRes.data);
+    }
+    getProducts();
+  }, [id])
+
+  const handleClick = (section) => {
+    router.push(`/products/${section}`)
+  }
+  
   return (
-    <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
+    <>
+    <Brands onClick={handleClick} />
+    <section id="pricing" className="relative z-10 pb-16">
       <div className="container">
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3 items-center">
-          <PricingBox
-            title="Cardmarket"
-            desc="Compra cartas sueltas directamente a través de cardmarket. Completa tu colección o consigue tu mazo competitivo sin tener que abrir sobres."
-            image="/images/products/elsa.jpg"
-            text="Compra en cardmarket"
-            link="https://www.cardmarket.com/es/Lorcana/Users/SimonVtcg"
-          >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
-          </PricingBox>
-          <PricingBox
-            title="Reservas"
-            desc="Reserva producto sellado de las siguientes expansiones con nosotros."
-            image="/images/products/altered-2.webp"
-            text="Reserva ya"
-            link="mailto:simonvtcg@gmailcom"
-          >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
-          </PricingBox>
-          <PricingBox
-            title="Encargos"
-            desc="¿Necesitas algo especial? Ponte en contacto con nosotros e intentaremos encontrarte lo que necesitas."
-            image="/images/products/magic.jpg"
-            text="Escribenos"
-            link="mailto:simonvtcg@gmailcom"
-          >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
-          </PricingBox>
+          {
+            products.map((product: any) =>  
+                <PricingBox
+                  key={product.name}
+                  title={product.name}
+                  priceId={product.default_price}
+                  price={product.metadata.prices.data[0].unit_amount}
+                  desc={product.description}
+                  image={product.images[0]}
+                  stock={product.metadata.Stock}
+                  text="Añadir a carrito">
+                  <OfferList text="All UI Components" status="active" />
+                </PricingBox>)
+          }
         </div>
       </div>
 
@@ -109,6 +112,7 @@ const Products = () => {
         </svg>
       </div>
     </section>
+    </>
   );
 };
 

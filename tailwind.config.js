@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const { faHandMiddleFinger } = require('@fortawesome/free-solid-svg-icons');
 const colors = require("tailwindcss/colors");
 
 module.exports = {
@@ -98,10 +99,21 @@ module.exports = {
             opacity: 1,
             transform: "translate3d(0, 0, 0)",
           },
+        },
+        "fade-in-down": {
+          "0%": {
+            opacity: 0,
+            transform: "translate3d(0, 100%, 0)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translate3d(0, 0, 0)",
+          },
         }
       },
       animation: {
         'fadeInLeft': 'fade-in-left 1s ease-in-out 0.25s 1',
+        'fadeInDown': 'fade-in-down 1s ease-out 0s 1 forwards',
         'fadeInRight': 'fade-in-right 1s ease-in-out 0.25s 1',
       },
     },

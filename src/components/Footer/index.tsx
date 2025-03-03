@@ -121,6 +121,22 @@ const Footer = () => {
                   Enlaces destacados
                 </h2>
                 <ul>
+                <li>
+                    <Link
+                      href="/legal"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    >
+                      Aviso legal
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/terms"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    >
+                      Términos y condiciones
+                    </Link>
+                  </li>
                   <li>
                     <Link
                       href="/privacy"
@@ -135,6 +151,14 @@ const Footer = () => {
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Política de cookies
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/shipment"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    >
+                      Envíos y devoluciones
                     </Link>
                   </li>
                 </ul>

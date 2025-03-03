@@ -3,10 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+
+import useStore from "@/lib/zustand";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 
 const Header = () => {
+  const { items } = useStore();
+  const itemsCount = items.reduce((acc,curr) => acc + curr.count,0)
+
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
@@ -150,24 +158,16 @@ const Header = () => {
                 </nav>
               </div>
               <div>
-                </div>
-              {/* <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <Link
-                  href="/signin"
-                  className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
-                >
-                  Sign In
-                </Link>
-                <Link
-                  href="/signup"
-                  className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
-                >
-                  Sign Up
-                </Link>
-                <div>
-                  <ThemeToggler />
-                </div>
-              </div> */}
+              <button type="button" className="relative inline-flex items-center p-3 text-sm font-medium">
+                <a href="/checkout">
+                <FontAwesomeIcon icon={faCartShopping} className="fas fa-instagram fa-2xl">
+                </FontAwesomeIcon>
+                  { itemsCount !== 0 && 
+                    <div className="absolute inline-flex items-center justify-center w-8 h-8 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">{itemsCount}</div>
+                  }
+                  </a>
+                </button>
+              </div>
             </div>
           </div>
         </div>
