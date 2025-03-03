@@ -38,9 +38,11 @@ const PricingBox = (props: {
           <div className="flex justify-center">
             <img src={image} className={`object-contain h-[300px] pt-10 hover:scale-125`}></img>
           </div>
-          <div className="text-end p-4">
+          {
+          price && <div className="text-end p-4">
             <span className="text-[32px] font-black shadow-lg [text-shadow:_4px_4px_rgb(0_84_143)]">{formattedPrice(price)}</span>
           </div>
+          }
           <div className="self-end border-t border-body-color border-opacity-10 pt-8 dark:border-white dark:border-opacity-10">
             {
               !link && 
