@@ -8,11 +8,11 @@ import {
 import { loadStripe } from '@stripe/stripe-js'
 import useStore from "@/lib/zustand";
 
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY ?? '')
 
 const Checkout = () => {
     const [clientSecret, setClientSecret] = useState<string | null>(null);
-    const { items } = useStore();
+    const { items } = useStore() as any
 
     useEffect(() => {
         if (!items.length) return;

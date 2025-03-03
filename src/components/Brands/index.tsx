@@ -29,7 +29,7 @@ const SingleBrand = ({ brand, onClick }: { brand: Brand, onClick: Function }) =>
   return (
     <div className="flex w-1/2 items-center justify-center px-3 py-[15px] sm:w-1/2 md:w-1/3 lg:w-1/4">
       <a rel="nofollow noreferrer" className="relative h-28 w-full opacity-70 transition hover:opacity-100 dark:opacity-60 dark:hover:opacity-100 cursor-pointer">
-        <Image src={imageLight} alt={name} width={200} height={100} className="hidden dark:block max-h-24 mx-auto" onClick={() => onClick(brand.name)}/>
+        <Image src={imageLight ?? ''} alt={name} width={200} height={100} className="hidden dark:block max-h-24 mx-auto" onClick={() => onClick(brand.name)}/>
       </a>
     </div>
   );

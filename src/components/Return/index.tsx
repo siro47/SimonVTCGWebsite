@@ -3,7 +3,7 @@ import useStore from "@/lib/zustand";
 import { useEffect } from "react";
 
 const Return = ({customerEmail}) => { 
-    const { items, clearPersistedState } = useStore();
+    const { items, clearPersistedState } = useStore() as any;
 
     if (items.length) clearPersistedState();
 
@@ -11,8 +11,8 @@ const Return = ({customerEmail}) => {
       <div className="container py-8 md:p-8">
         <section id="success">
             <p>
-                We appreciate your business! A confirmation email will be sent to{' '}
-            {customerEmail}. If you have any questions, please email{' '}
+                ¡Tu compra se ha realizado con éxito! Recibirás un email de confirmación en {' '}
+            {customerEmail}. Si tienes alguna pregunta, no dudes en contactarnos en {' '}
             </p>
             <a href="mailto:simonvtcg@gmail.com">simonvtcg@gmail.com</a>.
         </section>

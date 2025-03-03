@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const Breadcrumb = ({
   pageName,
-  pageLink = null,
-  subPageName = null,
+  pageLink = '',
+  subPageName = '',
   description,
 }: {
   pageName: string;

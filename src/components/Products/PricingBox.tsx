@@ -3,17 +3,17 @@ import { useEffect, useState } from "react";
 
 const PricingBox = (props: {
     title: string;
-    priceId: string;
+    priceId?: string;
     price?: string;
     desc: string;
     image: string;
     text: string;
-    stock: number;
+    stock?: number;
     link?: string;
     children: React.ReactNode;
   }) => {
     const { title, price, priceId, stock, desc, text, image, link } = props;
-    const { items, increase, clearPersistedState } = useStore();
+    const { items, increase, clearPersistedState } = useStore() as any;
     // clearPersistedState();
     console.log(priceId)
     const [available, setAvailable] = useState(true);
@@ -25,7 +25,7 @@ const PricingBox = (props: {
 
     useEffect(() => {
       const itemsInCart = items.find(i => i.key === priceId)?.count ?? 0;
-      setAvailable(itemsInCart < stock)
+      if (stock != null) setAvailable(itemsInCart < stock)
     }, [items])
     
     return (

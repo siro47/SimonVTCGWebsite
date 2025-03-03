@@ -16,7 +16,7 @@ const ProductsPage = () => {
         pageName="Productos"
         description="Consigue lo que necesites de tu TCG Favorito"
       />
-      <Products></Products>
+      <Products params={null}></Products>
     </>
   );
 };
