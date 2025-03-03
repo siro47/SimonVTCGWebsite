@@ -1,12 +1,11 @@
 'use server'
 
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextRequest, NextResponse } from "next/server";
 import { headers } from 'next/headers'
-import useStore from "@/lib/zustand";
 
 import { stripe } from '../../../lib/stripe'
 
-export async function POST(req: NextApiRequest, res: NextApiResponse) {
+export async function POST(req: NextRequest, res: NextResponse) {
     const headersList = await headers()
     const origin = headersList.get('origin')
     const body = await req.json();
