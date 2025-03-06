@@ -79,6 +79,9 @@ const Header = () => {
                     aria-label="Mobile Menu"
                     className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
                   >
+                    { itemsCount !== 0 && 
+                      <div className="absolute inline-flex items-center justify-center w-8 h-8 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">{itemsCount}</div>
+                    }
                     <span
                       className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
                         navbarOpen ? " top-[7px] rotate-45" : " "
@@ -113,7 +116,7 @@ const Header = () => {
                               usePathName === menuItem.path
                                 ? "text-primary dark:text-white"
                                 : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
-                            }`}
+                            } ${menuItem.onlyMobile ? 'lg:hidden': ''}`}
                           >
                             {menuItem.title}
                           </Link>
@@ -158,7 +161,7 @@ const Header = () => {
                 </nav>
               </div>
               <div>
-                <button type="button" className="relative inline-flex items-center p-3 text-sm font-medium">
+                <button type="button" className="relative inline-flex items-center p-3 text-sm font-medium hidden lg:block">
                 <a href="/checkout">
                 <FontAwesomeIcon icon={faCartShopping} className="fas fa-instagram fa-2xl">
                 </FontAwesomeIcon>

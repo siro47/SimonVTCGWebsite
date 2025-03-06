@@ -24,7 +24,15 @@ const menuData: Menu[] = [
     title: "Servicios",
     path: "/services",
     newTab: false,
-  },/*
+  },
+  {
+    id: 99,
+    onlyMobile: true,
+    title: "Carrito",
+    path: "/checkout",
+    newTab: false,
+  }
+  /*
   {
     id: 33,
     title: "Blog",
