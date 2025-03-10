@@ -57,7 +57,7 @@ const Privacy = () => {
           <p>Nos reservamos el derecho de actualizar esta Política de Privacidad en cualquier momento. Cualquier cambio será publicado en esta página, con una fecha de actualización. Te recomendamos revisar periódicamente esta política para estar informado sobre cómo protegemos tu información.</p>
           <h2 className="text-xl font-bold my-8">Contacto</h2>
           <p>Si tienes alguna pregunta o inquietud sobre esta Política de Privacidad o sobre cómo manejamos tus datos, por favor, contáctanos                     <Link
-                      href="mailto:simonvtcg@gmailcom" className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary">aquí</Link></p>
+                      href="mailto:simonvtcg@gmail.com" className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary">aquí</Link></p>
       </div>
     </>
   );

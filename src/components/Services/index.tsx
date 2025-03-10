@@ -32,7 +32,7 @@ const Services = () => {
             desc="Reserva producto sellado de las siguientes expansiones con nosotros."
             image="/images/products/altered-2.webp"
             text="Reserva ya"
-            link="mailto:simonvtcg@gmailcom"
+            link="mailto:simonvtcg@gmail.com"
           >
             <OfferList text="All UI Components" status="active" />
             <OfferList text="Use with Unlimited Projects" status="active" />
@@ -46,7 +46,7 @@ const Services = () => {
             desc="¿Necesitas algo especial? Ponte en contacto con nosotros e intentaremos encontrarte lo que necesitas."
             image="/images/products/magic.jpg"
             text="Escribenos"
-            link="mailto:simonvtcg@gmailcom"
+            link="mailto:simonvtcg@gmail.com"
           >
             <OfferList text="All UI Components" status="active" />
             <OfferList text="Use with Unlimited Projects" status="active" />
