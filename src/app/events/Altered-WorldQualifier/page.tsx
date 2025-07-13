@@ -25,7 +25,7 @@ const SWUPage = () => {
         <div className="w-full px-4 md:p-10">
           <div className="relative aspect-[3/4] animate-fadeInLeft">
             <Image
-              src="/images/tournaments/altered-world-qualifiers.jpg"
+              src="/images/tournaments/altered-world-qualifiers-spain.jpg"
               alt="world-qualifiers-event"
               fill
               className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0 "

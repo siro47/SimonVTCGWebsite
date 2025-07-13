@@ -12,7 +12,7 @@ const EventsSection = () => {
           <div className="w-full px-4 md:p-10">
             <div className="relative aspect-[3/4] animate-fadeInRight">
               <Image
-                src="/images/tournaments/altered-march.jpeg"
+                src="/images/tournaments/altered-world-qualifiers-spain.jpg"
                 alt="altered-event"
                 fill
                 className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
@@ -24,7 +24,7 @@ const EventsSection = () => {
             <a href="/events/Altered-WorldQualifier" className="text-primary italic"> Más información {'>'} </a>
           </div>
         <div className="w-fit mx-auto mt-10">
-          <a href="https://wargenwargames.com/es/altered/7401-altered-simonv-tournament-season-ii.html" target="_blank">
+          <a href="https://bclever.ai/eventos/barcelona/infrefest-2025" target="_blank">
             <button className="w-[200px] px-8 py-4 rounded-sm text-base text-white dark:bg-secondary">
               Apúntate
             </button>
