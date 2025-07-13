@@ -61,6 +61,7 @@ module.exports = {
       },
       listStyleImage: {
         ship: 'url("/images/icons/iconShip.png")',
+        altered: 'url("/images/icons/iconAltered.svg")'
       },
       boxShadow: {
         signUp: "0px 5px 10px rgba(4, 10, 34, 0.2)",
