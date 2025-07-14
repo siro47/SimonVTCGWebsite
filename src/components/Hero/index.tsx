@@ -13,14 +13,14 @@ const Hero = () => {
           <div className="w-10 sm:w-1/6 md:w-1/4"></div>
           <div className="sm:w-2/3 md:w-1/2">
             <h1 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
-              Torneo Altered Season II
+              Torneo Altered - World Championship Qualifier Spain 2025
             </h1>
             <p className="mb-8 text-xl leading-tight">
-              Inscríbete a nuestro torneo segundo torneo de Altered.
+              Inscríbete al clasificatorio para los mundiales de 2025
               <br/>
-              Con más de 500€ garantizados en premios.
+              Viaje + alojamiento pagado a los mundiales para el ganador
             </p>
-            <a href="https://wargenwargames.com/es/altered/7401-altered-simonv-tournament-season-ii.html" target="_blank">
+            <a href="https://bclever.ai/eventos/barcelona/infrefest-2025" target="_blank">
               <button className="w-[200px] px-8 py-4 rounded-sm text-base text-white dark:bg-secondary">
                 Apúntate
               </button>
