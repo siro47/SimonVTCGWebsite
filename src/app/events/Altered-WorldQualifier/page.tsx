@@ -3,7 +3,7 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendar, faClock, faMap, faMoneyBill1} from "@fortawesome/free-regular-svg-icons";
+import { faCalendar, faClock, faMap, faMoneyBill1, faEnvelope} from "@fortawesome/free-regular-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 export const metadata: Metadata = {
@@ -105,10 +105,18 @@ const SWUPage = () => {
               <li className="mx-6 py-2">Las jugadores que utilicen proxies deberán informar a sus oponentes antes del inicio de cada partida y mostrar las cartas proxy boca abajo</li>
             </ul>
           </div>
-          <h1 className='text-xl font-bold pb-8 mt-8'>Consigue las cartas que necesites</h1>
+          <h1 className='text-xl font-bold pb-8 mt-8'>Mantente informado</h1>
           <div className='text-sm mb-8'>
-            <p>Si necesitas cartas físicas para el torneo, contacta con nosotros a través de nuestro grupo de WhatsApp.
+            <p>Entra en el grupo de WhatsApp del torneo para estar al tanto de todas las novedades
             <a href="https://chat.whatsapp.com/JWrJAkUXPNi11hsGbgNFx0" target="_blank">
+              <FontAwesomeIcon icon={faWhatsapp} className="fas fa-instagram fa-2xl hover:text-secondary mx-2"></FontAwesomeIcon>
+            </a>
+            </p>
+            <p>⁠Si deseas cartas escribenos al correo o por WhatsApp, envio a toda europa o entrega en mano el dia del torneo. ¡Descuentos exclusivos para participantes!
+            <a href="mailto:simonvtcg@gmail.com" target="_blank">
+              <FontAwesomeIcon icon={faEnvelope} className="fas fa-envelope fa-2xl hover:text-secondary mx-2"></FontAwesomeIcon>
+            </a>
+            <a href="https://wa.me/627107240" target="_blank">
               <FontAwesomeIcon icon={faWhatsapp} className="fas fa-instagram fa-2xl hover:text-secondary mx-2"></FontAwesomeIcon>
             </a>
             </p>
