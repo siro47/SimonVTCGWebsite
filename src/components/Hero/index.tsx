@@ -20,7 +20,7 @@ const Hero = () => {
               <br/>
               Viaje + alojamiento pagado a los mundiales para el ganador
             </p>
-            <a href="https://bclever.ai/eventos/barcelona/infrefest-2025" target="_blank">
+            <a href="/events/Altered-WorldQualifier" target="_blank">
               <button className="w-[200px] px-8 py-4 rounded-sm text-base text-white dark:bg-secondary">
                 Apúntate
               </button>
