@@ -89,10 +89,53 @@ const SWUPage = () => {
               src="/images/tournaments/altered-prizes-image.png"
               width="1000"
               height="500"
-              alt="swu-event"
+              alt="altered-prizes"
               className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none"
             />
           </div>
+          <div className="container grid grid-cols-2 xl:grid-cols-4 mt-8 text-center">
+            <div>
+              <h2 className='text-xl font-bold pb-8 mt-8'>Playmat</h2>
+              <Image
+                  src="/images/tournaments/alteredWQC/ALT_WC_PLAYMAT_TOP8.png"
+                  width="1000"
+                  height="500"
+                  alt="altered-champion"
+                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none"
+                />
+            </div>
+            <div>
+              <h2 className='text-xl font-bold pb-8 mt-8'>Adventure Pack</h2>
+              <Image
+                src="/images/tournaments/alteredWQC/ALT_AVENTURECARDS_BTG.png"
+                width="1000"
+                height="500"
+                alt="altered-adventure"
+                className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none"
+              />
+            </div>
+            <div>
+              <h2 className='text-xl font-bold pb-8 mt-8'>Faction Champion</h2>
+              <Image
+                src="/images/tournaments/alteredWQC/ALT_FACTIONCHAMPION_WC.png"
+                width="1000"
+                height="500"
+                alt="altered-adventure"
+                className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none"
+              />
+            </div>
+            <div>
+              <h2 className='text-xl font-bold pb-8 mt-8'>Hero Booster</h2>
+              <Image
+                src="/images/tournaments/alteredWQC/ALT_HEROSBOOSTER_WC.png"
+                width="1000"
+                height="500"
+                alt="altered-adventure"
+                className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none"
+              />
+            </div>
+          </div>
+
           <h1 className='text-xl font-bold pb-8 mt-8'>Información sobre proxies</h1>
           <div className="text-sm">
             <p className='mb-2'>El uso de proxies se permite únicamente para cartas únicas y siguiendo las siguientes condiciones:</p>
