@@ -10,7 +10,7 @@ const EventsSection = () => {
           <div className="lg:w-3/12"></div>
 
           <div className="w-full px-4 md:p-10">
-            <div className="relative aspect-[3/4] animate-fadeInRight">
+            <div className="relative aspect-[3/4] animate-fadeInLeft">
               <Image
                 src="/images/tournaments/altered-world-qualifiers-spain.jpg"
                 alt="altered-event"

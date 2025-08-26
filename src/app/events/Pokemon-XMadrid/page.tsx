@@ -4,7 +4,6 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faClock, faMap, faMoneyBill1, faEnvelope} from "@fortawesome/free-regular-svg-icons";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 export const metadata: Metadata = {
   title: "Pokémon TCG - XMadrid 2025 | SimonV TCG",
@@ -85,7 +84,7 @@ const EventPage = () => {
               src="/images/tournaments/pokemon-prizes.jpg"
               width="1000"
               height="500"
-              alt="altered-prizes"
+              alt="pokemon-prizes"
               className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none"
             />
           </div>
@@ -93,7 +92,7 @@ const EventPage = () => {
             <div>
               <h2 className='text-xl font-bold pb-8 mt-8'>ETBs Llama blanca / Fulgor negro</h2>
               <Image
-                  src="/images/tournaments/PokemonXMadrid/etb-llamablanca.webp"
+                  src="/images/tournaments/pokemonXMadrid/etb-llamablanca.webp"
                   width="1000"
                   height="500"
                   alt="etb-llamablanca"
@@ -103,20 +102,20 @@ const EventPage = () => {
             <div>
               <h2 className='text-xl font-bold pb-8 mt-8'>Sobres Mega Symphonia</h2>
               <Image
-                src="/images/tournaments/PokemonXMadrid/mega-symphonia.png"
+                src="/images/tournaments/pokemonXMadrid/mega-symphonia.png"
                 width="1000"
                 height="500"
-                alt="altered-adventure"
+                alt="mega-symphonia"
                 className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none"
               />
             </div>
             <div>
               <h2 className='text-xl font-bold pb-8 mt-8'>Sobres Mega Brave</h2>
               <Image
-                src="/images/tournaments/PokemonXMadrid/mega-brave.png"
+                src="/images/tournaments/pokemonXMadrid/mega-brave.png"
                 width="1000"
                 height="500"
-                alt="altered-adventure"
+                alt="mega-brave"
                 className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none"
               />
             </div>
