@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const EventsSection = () => {
   return (
-    <section id="altered-event" className="md:pt-4 lg:pt-10">
-      <h1 className="mb-8 text-3xl"> Altered TCG: WQC Spain 2025 </h1>
+    <section id="pokemon-x-madrid" className="md:pt-4 lg:pt-10">
+      <h1 className="mb-8 text-3xl"> Pokémon TCG: X-Madrid 2025 </h1>
       <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
         <div className="-mx-4 flex flex-wrap items-center">
 
@@ -12,7 +12,7 @@ const EventsSection = () => {
           <div className="w-full px-4 md:p-10">
             <div className="relative aspect-[3/4] animate-fadeInRight">
               <Image
-                src="/images/tournaments/altered-world-qualifiers-spain.jpg"
+                src="/images/tournaments/pokemon-x-madrid.jpeg"
                 alt="altered-event"
                 fill
                 className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
@@ -21,10 +21,10 @@ const EventsSection = () => {
             </div>
         </div>
         <div className="text-end md:pr-10">
-            <a href="/events/Altered-WorldQualifier" className="text-primary italic"> Más información {'>'} </a>
+            <a href="/events/Pokemon-XMadrid" className="text-primary italic"> Más información {'>'} </a>
           </div>
         <div className="w-fit mx-auto mt-10">
-          <a href="https://bclever.ai/eventos/barcelona/infrefest-2025" target="_blank">
+          <a href="https://www.eventbrite.com/e/torneo-pokemon-tcg-x-madrid-simonv-tickets-1630017749969" target="_blank">
             <button className="w-[200px] px-8 py-4 rounded-sm text-base text-white dark:bg-secondary">
               Apúntate
             </button>
