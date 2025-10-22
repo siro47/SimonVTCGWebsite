@@ -13,14 +13,14 @@ const Hero = () => {
           <div className="w-10 sm:w-1/6 md:w-1/4"></div>
           <div className="sm:w-2/3 md:w-1/2">
             <h1 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
-              Torneo Altered - World Championship Qualifier Spain 2025
+              Torneo Riftbound XMadrid
             </h1>
             <p className="mb-8 text-xl leading-tight">
-              Inscríbete al clasificatorio para los mundiales de 2025
+              Torneo presentación Riftbound en XMadrid el 9 de Noviembre 2025
               <br/>
-              Viaje + alojamiento pagado a los mundiales para el ganador
+              Limitado a 64 plazas
             </p>
-            <a href="/events/Altered-WorldQualifier" target="_blank">
+            <a href="/events/Riftbound-XMadrid" target="_blank">
               <button className="w-[200px] px-8 py-4 rounded-sm text-base text-white dark:bg-secondary">
                 Apúntate
               </button>

@@ -1,5 +1,4 @@
-import EventsSection from "@/components/Events/03-AlteredWorldQualifier";
-import EventsSection2 from "@/components/Events/04-PokemonXMadrid";
+import EventsSection from "@/components/Events/05-RiftboundXMadrid";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
 import { Metadata } from "next";
@@ -20,7 +19,6 @@ const AboutPage = () => {
 
       <div className="container grid grid-cols-1 md:grid-cols-2">
         <EventsSection />
-        <EventsSection2 />
       </div>
     </>
   );
